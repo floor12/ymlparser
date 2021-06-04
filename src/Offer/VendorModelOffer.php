@@ -7,6 +7,11 @@ class VendorModelOffer extends AMainOffer
     /**
      * @var string
      */
+    protected $name;
+
+    /**
+     * @var string
+     */
     protected $typePrefix;
 
     /**
@@ -52,6 +57,25 @@ class VendorModelOffer extends AMainOffer
     public function setTypePrefix($value)
     {
         $this->typePrefix = $value;
+
+        return $this;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setName($value)
+    {
+        $this->name = $value;
 
         return $this;
     }
